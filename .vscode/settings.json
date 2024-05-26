@@ -1,4 +1,6 @@
 {
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.renderWhitespace": "none",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,

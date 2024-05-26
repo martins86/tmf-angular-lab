@@ -65,12 +65,17 @@ dist
 
 > Criando o .prettierrc
 
+- arrowParens: sempre inclua parênteses. Exemplo:(x) => x
+- bracketSpacing: espaçamento entre colchetes. Exemplo: { foo: bar }
+- bracketSameLine: o fechamento da tag fica na mesma linha. Exemplo: <tag/>
+- experimentalTernaries: utilize ternários curiosos, com o ponto de interrogação após a condição.
+
 ```sh
 {
-  "trailingComma": "es5",
-  "tabWidth": 2,
-  "semi": false,
-  "singleQuote": true
+  "arrowParens": "always",
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "experimentalTernaries": true
 }
 ```
 
@@ -88,16 +93,30 @@ npm install prettier --save-dev --save-exact
 
 <br>
 
-## 4. Setup - Adicionando e configurando o Lint-staged
+## 4. Setup - Adicionando eslint
+
+> Instalando eslint
+
+```sh
+ng add @angular-eslint/schematics
+```
+
+<br>
+
+---
+
+<br>
+
+## 5. Setup - Adicionando e configurando o Lint-staged
 
 > Criando o .lintstagedrc
 
 ```sh
 {
   "*.{js,ts,md,html,scss,json}": [
-    "npm run pwrite",
+    "npm run prettier:write",
     "git add",
-    "npm run pcheck"
+    "npm run prettier:check"
   ]
 }
 ```

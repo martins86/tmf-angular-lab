@@ -1,14 +1,36 @@
 # Editor configuration, see https://editorconfig.org
+
+## root: propriedade especial que deve ser especificada na parte superior do arquivo, fora de qualquer seção. Defina como verdadeiro para interromper .editorconfiga pesquisa de arquivos no arquivo atual.
 root = true
 
 [*]
+## charset: defina como latin1 , utf-8 , utf-8-bom , utf-16be ou utf-16le para controlar o conjunto de caracteres.
 charset = utf-8
+
+## indent_style: defina como tab ou space para usar tabulações rígidas ou soft tabs, respectivamente.
 indent_style = space
+
+## indent_size: um número inteiro que define o número de colunas usadas para cada nível de recuo e a largura das tabulações virtuais (quando suportadas). Quando definido como tab , o valor de tab_width(se especificado) será usado.
 indent_size = 2
+
+## tab_width: um número inteiro que define o número de colunas usadas para representar um caractere de tab. O padrão é o valor de indent_sizee geralmente não precisa ser especificado.
+# tab_width = 2
+
+## insert_final_newline: definido como true para garantir que o arquivo termine com uma nova linha ao salvar e false para garantir que isso não aconteça.
 insert_final_newline = true
+
+## trim_trailing_whitespace: defina como true para remover quaisquer caracteres de espaço em branco anteriores aos caracteres de nova linha e false para garantir que isso não aconteça.
 trim_trailing_whitespace = true
 
+
+## end_of_line: defina como lf , cr ou crlf para controlar como as quebras de linha são representadas.
+# end_of_line = crlf
+
+## max_line_length: força a quebra de linha após a quantidade de caracteres especificada. offpara desativar esse recurso (use as configurações do editor).
+# max_line_length = 80
+
 [*.ts]
+## quote_type: indica o estilo de cotação preferido para literais de string, single '', double "".
 quote_type = single
 
 [*.md]
