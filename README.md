@@ -1,27 +1,30 @@
-# TmfAngularLab
+# TMF Angular Lab
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+> Projeto para estudos com Angular
 
-## Development server
+<br>
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Abrir IDE On-line
 
-## Code scaffolding
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/workspaces)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br>
+<br>
 
-## Build
+## Scripts no(s) package(s)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+| Ação                                                                 | Comando          |
+| -------------------------------------------------------------------- | ---------------- |
+| `Inicia o App local na porta 4200`                                   | npm run start    |
 
-## Running unit tests
+<br>
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<br>
+<br>
+<br>
 
-## Running end-to-end tests
+# Licença de uso &nbsp;
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+TMF Lab is licensed under [MIT licensed](./LICENSE).
