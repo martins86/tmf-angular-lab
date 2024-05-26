@@ -1,0 +1,32 @@
+image:
+  file: .gitpod.Dockerfile
+
+# Portas e Ações
+ports:
+  - name: localhost webApp
+    port: 4200
+    onOpen: open-browser
+    visibility: public
+  - name: localhost api
+    port: 3000
+    onOpen: open-preview
+    visibility: public
+  - name: localhost api
+    port: 8080
+    onOpen: open-preview
+    visibility: public
+  - name: Testes Karma
+    port: 9222
+    onOpen: ignore
+    visibility: public
+  - name: Testes Karma
+    port: 9876
+    onOpen: ignore
+    visibility: public
+
+# Tarefas na Inicialização
+tasks:
+  - name: Start front-end
+    before: export NG_CLI_ANALYTICS=ci
+    init: echo n | npm i -g @angular/cli@17
+    # command: npm ci && npm run start
