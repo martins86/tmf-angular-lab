@@ -247,3 +247,94 @@ ng add @angular/material
 ---
 
 <br>
+<br>
+<br>
+<br>
+
+# Feature - Aplication
+
+## 1 - Iniciando Environments
+
+```sh
+ng generate environments
+```
+
+<br>
+
+---
+
+<br>
+
+## 2 - Iniciando Layout
+
+> cria o componente do template default.
+
+```sh
+ng generate component layout/default
+```
+
+> cria os componentes para o template default.
+
+```sh
+ng generate component layout/default/components/top-bar
+```
+
+```sh
+ng generate component layout/default/components/left-bar
+```
+
+```sh
+ng generate component layout/default/components/bottom-bar
+```
+
+> cria o componente do loading.
+
+```sh
+ng generate component layout/default/components/loading
+```
+
+<br>
+
+---
+
+<br>
+
+## 3 - Iniciando Authentication
+
+> cria as paginas de login, logout e registration.
+
+```sh
+ng generate component pages/authentication/login
+```
+
+```sh
+ng generate component pages/authentication/logout
+```
+
+```sh
+ng generate component pages/authentication/registration
+```
+
+<br>
+
+---
+
+<br>
+
+## 4 - Iniciando Paginas padrão
+
+> cria as paginas home e not found.
+
+```sh
+ng generate component pages/home
+```
+
+```sh
+ng generate component pages/not-found
+```
+
+<br>
+
+---
+
+<br>
