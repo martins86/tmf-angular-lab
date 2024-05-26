@@ -14,9 +14,9 @@
 
 ## Scripts no(s) package(s)
 
-| Ação                                                                 | Comando          |
-| -------------------------------------------------------------------- | ---------------- |
-| `Inicia o App local na porta 4200`                                   | npm run start    |
+| Ação                               | Comando       |
+| ---------------------------------- | ------------- |
+| `Inicia o App local na porta 4200` | npm run start |
 
 <br>
 <br>

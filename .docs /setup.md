@@ -114,7 +114,6 @@ npm install lint-staged --save-dev
 
 <br>
 
-
 ## 5. Setup - Adicionando e configurando o Husky
 
 > Adicionando o Husky.
