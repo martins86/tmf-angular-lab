@@ -19,6 +19,10 @@ ng new tmf-angular-lab --directory=./ --routing --style=scss --ssr=false
 > Instalando o Commitizen no projeto.
 
 ```sh
+npm install commitizen -g
+```
+
+```sh
 npm install commitizen --save-dev
 ```
 
@@ -205,6 +209,7 @@ ng add @angular/material
     "prettier:write": "npx prettier --write --ignore-unknown .",
     "prettier:check": "npx prettier --check .",
     "lint": "ng lint"
+    "commit": "git-cz",
     "pre-commit": "npx --no-install lint-staged",
     "pre-push": "npm run test:ci",
     "prepare": "husky",
