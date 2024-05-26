@@ -1,6 +1,25 @@
 {
   "name": "tmf-angular-lab",
   "version": "0.0.0",
+  "description": "Projeto para estudos com Angular",
+  "engines": {
+    "node": "^20.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martins86/tmf-angular-lab.git"
+  },
+  "keywords": [
+    "tmf86",
+    "angular"
+  ],
+  "author": "Thiago Martins de Freitas",
+  "email": "martins86@gmail.com",
+  "license": "ISC",
+  "homepage": "https://martins86.github.io/tmf-angular-lab/",
+  "bugs": {
+    "url": "https://github.com/martins86/tmf-angular-lab/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port=4200 --host=0.0.0.0 --disable-host-check --open",
