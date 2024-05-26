@@ -1,89 +1,60 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "cli": {
+    "analytics": "9ce632a8-0e5b-40f1-bdaa-211a9fbf4947",
+    "schematicCollections": ["@angular-eslint/schematics"]
+  },
   "newProjectRoot": "projects",
   "projects": {
     "tmf-angular-lab": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "",
-      "sourceRoot": "src",
-      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
+          "configurations": {
+            "development": {
+              "extractLicenses": false,
+              "optimization": false,
+              "sourceMap": true
+            },
+            "production": {
+              "budgets": [
+                {
+                  "maximumError": "1mb",
+                  "maximumWarning": "500kb",
+                  "type": "initial"
+                },
+                {
+                  "maximumError": "4kb",
+                  "maximumWarning": "2kb",
+                  "type": "anyComponentStyle"
+                }
+              ],
+              "outputHashing": "all"
+            }
+          },
+          "defaultConfiguration": "production",
           "options": {
-            "outputPath": "dist/tmf-angular-lab",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
+            "browser": "src/main.ts",
+            "index": "src/index.html",
+            "inlineStyleLanguage": "scss",
+            "outputPath": "dist/tmf-angular-lab",
+            "polyfills": ["zone.js"],
+            "scripts": [],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
+            "tsConfig": "tsconfig.app.json"
+          }
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "tmf-angular-lab:build:production"
-            },
-            "development": {
-              "buildTarget": "tmf-angular-lab:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "buildTarget": "tmf-angular-lab:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
-            ],
-            "scripts": []
           }
         },
         "lint": {
@@ -92,14 +63,43 @@
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "development": {
+              "buildTarget": "tmf-angular-lab:build:development"
+            },
+            "production": {
+              "buildTarget": "tmf-angular-lab:build:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "assets": ["src/favicon.ico", "src/assets"],
+            "inlineStyleLanguage": "scss",
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "scripts": [],
+            "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
+            ],
+            "tsConfig": "tsconfig.spec.json"
+          }
         }
-      }
+      },
+      "prefix": "app",
+      "projectType": "application",
+      "root": "",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "sourceRoot": "src"
     }
   },
-  "cli": {
-    "analytics": "9ce632a8-0e5b-40f1-bdaa-211a9fbf4947",
-    "schematicCollections": ["@angular-eslint/schematics"]
-  }
+  "version": 1
 }
