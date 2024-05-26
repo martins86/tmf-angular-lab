@@ -190,6 +190,10 @@ npm run pre-push
 ng add angular-cli-ghpages
 ```
 
+> Dar permição ao github actions - [Configurações > Actions](https://github.com/martins86/tmf-angular-lab/settings/actions)
+
+<br>
+
 > Adicionar o script no package.json.
 
 <br>
