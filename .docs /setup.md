@@ -190,6 +190,8 @@ npm run pre-push
 ng add angular-cli-ghpages
 ```
 
+> Adicionar o script no package.json.
+
 <br>
 
 ---
@@ -215,23 +217,25 @@ ng add @angular/material
 > Scripts do package.json
 
 ```sh
+  "scripts": {
     "ng": "ng",
     "start": "ng serve --port=4200 --host=0.0.0.0 --disable-host-check --open",
     "build": "ng build --configuration production --output-hashing=none --optimization --aot",
     "build:ci": "npm run build -- --base-href=/.",
     "deploy:gh": "ng deploy --base-href=/tmf-angular-lab/",
     "watch": "ng build --watch --configuration development",
+    "commit": "git-cz",
+    "prettier:write": "npx prettier --write --ignore-unknown .",
+    "prettier:check": "npx prettier --check .",
+    "lint": "ng lint",
     "test": "ng test --code-coverage",
     "test:dev": "npm run test -- --progress --browsers Chrome",
     "test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
-    "prettier:write": "npx prettier --write --ignore-unknown .",
-    "prettier:check": "npx prettier --check .",
-    "lint": "ng lint"
-    "commit": "git-cz",
     "pre-commit": "npx --no-install lint-staged",
     "pre-push": "npm run test:ci",
     "prepare": "husky",
-    "postinstall": "chmod ug+x .husky/*",
+    "postinstall": "chmod ug+x .husky/*"
+  },
 ```
 
 <br>
