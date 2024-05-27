@@ -85,6 +85,10 @@ dist
 npm install prettier --save-dev --save-exact
 ```
 
+```sh
+npm install eslint-config-prettier --save-dev
+```
+
 > Adicionar scripts do prettier no package.json.
 
 <br>
@@ -99,6 +103,16 @@ npm install prettier --save-dev --save-exact
 
 ```sh
 ng add @angular-eslint/schematics
+```
+
+> Adicionar a extensão do prettier no .eslintrc.json.
+
+```sh
+{
+  "extends": [
+    "prettier"
+  ]
+}
 ```
 
 <br>
