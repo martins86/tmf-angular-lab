@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DefaultComponent } from './default.component';
 
+const baseTitle = 'TMF Angular •';
 export const LAYOUT_DEFAULT: Routes = [
   {
     path: '',
@@ -11,13 +12,13 @@ export const LAYOUT_DEFAULT: Routes = [
     children: [
       {
         path: '',
-        title: 'Inicio',
+        title: `${baseTitle} Inicio`,
         loadChildren: () =>
           import('@pages/home/home.routes').then((m) => m.HOME_ROUTE),
       },
       {
         path: 'login',
-        title: 'Entrar',
+        title: `${baseTitle} Entrar`,
         loadChildren: () =>
           import('@pages/authentication/login/login.routes').then(
             (m) => m.LOGIN_ROUTE,
@@ -25,7 +26,7 @@ export const LAYOUT_DEFAULT: Routes = [
       },
       {
         path: 'logout',
-        title: 'Sair',
+        title: `${baseTitle} Sair`,
         loadChildren: () =>
           import('@pages/authentication/logout/logout.routes').then(
             (m) => m.LOGOUT_ROUTE,
@@ -33,7 +34,7 @@ export const LAYOUT_DEFAULT: Routes = [
       },
       {
         path: 'registration',
-        title: 'Registrar-se',
+        title: `${baseTitle} Registrar-se`,
         loadChildren: () =>
           import('@pages/authentication/registration/registration.routes').then(
             (m) => m.REGISTRATION_ROUTE,
@@ -41,7 +42,7 @@ export const LAYOUT_DEFAULT: Routes = [
       },
       {
         path: '**',
-        title: 'Não encontrado!',
+        title: `${baseTitle} Não encontrado!`,
         loadChildren: () =>
           import('@pages/not-found/not-found.routes').then(
             (m) => m.NOTFOUND_ROUTE,
@@ -60,7 +61,7 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
   override updateTitle(routerState: RouterStateSnapshot): void {
     const title = this.buildTitle(routerState);
     if (title !== undefined) {
-      this.title.setTitle(`TMF Angular • ${title}`);
+      this.title.setTitle(title);
     }
   }
 }
