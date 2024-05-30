@@ -25,7 +25,8 @@
       "@shared/*": ["./src/app/shared/*"],
       "@layout/*": ["./src/app/layout/*"],
       "@environments/*": ["./src/environments/*"]
-    }
+    },
+    "resolveJsonModule": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
