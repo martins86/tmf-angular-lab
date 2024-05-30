@@ -1,6 +1,6 @@
-<app-top-bar />
-<mat-drawer-container [hasBackdrop]="false">
-  <mat-drawer mode="over" [opened]="leftBarOpen">
+<app-top-bar (emitToggleLeftBar)="toggleLeftBarOpen()" />
+<mat-drawer-container [hasBackdrop]="true">
+  <mat-drawer mode="over" [opened]="leftBarOpen" disableClose>
     <app-left-bar />
   </mat-drawer>
   <mat-drawer-content>

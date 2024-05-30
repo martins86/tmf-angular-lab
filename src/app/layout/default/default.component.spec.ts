@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { DefaultComponent } from './default.component';
 
 describe('Testes do DefaultComponent', () => {
@@ -8,7 +10,7 @@ describe('Testes do DefaultComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DefaultComponent],
+      imports: [BrowserAnimationsModule, DefaultComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DefaultComponent);

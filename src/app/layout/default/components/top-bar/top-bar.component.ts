@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -11,4 +11,11 @@ import { AnimatedMenuButtonComponent } from '@shared/components/animated-menu-bu
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.scss',
 })
-export class TopBarComponent {}
+export class TopBarComponent {
+  @Output()
+  emitToggleLeftBar: EventEmitter<void> = new EventEmitter();
+
+  toggleLeftBar(): void {
+    this.emitToggleLeftBar.emit();
+  }
+}
