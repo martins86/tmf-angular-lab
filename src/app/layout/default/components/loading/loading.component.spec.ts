@@ -1,14 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { LoadingService } from '@shared/services/loading.service';
+
 import { LoadingComponent } from './loading.component';
 
-describe('LoadingComponent', () => {
+describe('Testes do LoadingComponent', () => {
   let component: LoadingComponent;
   let fixture: ComponentFixture<LoadingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LoadingComponent],
+      providers: [LoadingService],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoadingComponent);
@@ -16,7 +19,7 @@ describe('LoadingComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deve inicializar o LoadingComponent', () => {
     expect(component).toBeTruthy();
   });
 });
