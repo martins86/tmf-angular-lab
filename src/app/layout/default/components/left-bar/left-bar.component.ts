@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { version } from '../../../../../../package.json';
+import packages from '../../../../../../package.json';
 
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -22,5 +22,5 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   styleUrl: './left-bar.component.scss',
 })
 export class LeftBarComponent {
-  versionApp: string = version;
+  versionApp: string = packages.version;
 }

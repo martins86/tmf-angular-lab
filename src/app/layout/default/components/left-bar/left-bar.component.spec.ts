@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import { LeftBarComponent } from './left-bar.component';
 
@@ -8,7 +9,7 @@ describe('Testes do LeftBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LeftBarComponent],
+      imports: [RouterModule.forRoot([]), LeftBarComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LeftBarComponent);
