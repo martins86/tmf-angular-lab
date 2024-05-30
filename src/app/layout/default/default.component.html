@@ -1,7 +1,13 @@
 <app-top-bar />
-<app-left-bar />
-<main>
-  <router-outlet />
-</main>
+<mat-drawer-container [hasBackdrop]="false">
+  <mat-drawer mode="over" [opened]="leftBarOpen">
+    <app-left-bar />
+  </mat-drawer>
+  <mat-drawer-content>
+    <main>
+      <router-outlet />
+    </main>
+  </mat-drawer-content>
+</mat-drawer-container>
 <app-bottom-bar />
 <app-loading />

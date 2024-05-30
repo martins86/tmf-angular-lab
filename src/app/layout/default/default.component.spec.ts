@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DefaultComponent } from './default.component';
 
-describe('DefaultComponent', () => {
+describe('Testes do DefaultComponent', () => {
   let component: DefaultComponent;
   let fixture: ComponentFixture<DefaultComponent>;
 
@@ -16,7 +16,31 @@ describe('DefaultComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deve inicializar o DefaultComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('Testando o toggleLeftBarOpen', () => {
+    it('Deve trocar o valor do leftBarOpen de false para true', () => {
+      // Arrange
+      component.leftBarOpen = false;
+
+      // Act
+      component.toggleLeftBarOpen();
+
+      // Assert
+      expect(component.leftBarOpen).toBe(true);
+    });
+
+    it('Deve trocar o valor do leftBarOpen de true para false', () => {
+      // Arrange
+      component.leftBarOpen = true;
+
+      // Act
+      component.toggleLeftBarOpen();
+
+      // Assert
+      expect(component.leftBarOpen).toBe(false);
+    });
   });
 });
