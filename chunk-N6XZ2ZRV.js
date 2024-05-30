@@ -1,1 +1,0 @@
-import{Wa as r,Xa as i,ba as n,mb as a,pb as p}from"./chunk-DZN75GPB.js";var m=(()=>{let t=class t{};t.\u0275fac=function(o){return new(o||t)},t.\u0275cmp=n({type:t,selectors:[["app-logout"]],standalone:!0,features:[p],decls:2,vars:0,template:function(o,c){o&1&&(r(0,"p"),a(1,"logout works!"),i())}});let e=t;return e})();var d=[{path:"",component:m}];export{d as LOGOUT_ROUTE};
