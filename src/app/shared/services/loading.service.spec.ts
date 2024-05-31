@@ -23,7 +23,7 @@ describe('Testes do LoadingService', () => {
       service.setSpinner(false);
 
       // Assert
-      expect(service['loading']).toBeFalse();
+      expect(service['loading']).toBeFalsy();
     });
   });
 
@@ -36,7 +36,7 @@ describe('Testes do LoadingService', () => {
       const result = service.getSpinner();
 
       // Assert
-      expect(result).toBeTrue();
+      expect(result).toBeTruthy();
     });
   });
 });

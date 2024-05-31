@@ -29,7 +29,7 @@ describe('Testando o AnimatedMenuButtonComponent', () => {
       component.toggleAnimation();
 
       // Assert
-      expect(component.isAnimated).toBeFalse();
+      expect(component.isAnimated).toBeFalsy();
     });
 
     it('Deve setar true quando o boolean do isAnimated for false', () => {
@@ -40,7 +40,7 @@ describe('Testando o AnimatedMenuButtonComponent', () => {
       component.toggleAnimation();
 
       // Assert
-      expect(component.isAnimated).toBeTrue();
+      expect(component.isAnimated).toBeTruthy();
     });
   });
 });
