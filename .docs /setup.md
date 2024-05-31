@@ -230,6 +230,41 @@ ng add @angular/material
 
 <br>
 
+## 8. Setup - Migrando para o Jest
+
+> Removendo Jasmine e Karma
+
+```sh
+npm uninstall jasmine-core @types/jasmine karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter
+```
+
+> Instalando o Jest
+
+```sh
+npm install --save-dev jest @types/jest @jest/globals jest-environment-jsdom jest-preset-angular ts-jest
+```
+
+```sh
+ng add @angular-builders/jest
+```
+
+```sh
+npx jest --init
+```
+
+> ✔ Would you like to use Jest when running "test" script in "package.json"? … `yes` <br>
+> ✔ Would you like to use Typescript for the configuration file? … `yes` <br>
+> ✔ Choose the test environment that will be used for testing › `jsdom (browser-like)` <br>
+> ✔ Do you want Jest to add coverage reports? … `yes` <br>
+> ✔ Which provider should be used to instrument code for coverage? › `v8` <br>
+> ✔ Automatically clear mock calls, instances, contexts and results before every test? … `yes` <br>
+
+<br>
+
+---
+
+<br>
+
 ## Setup - Scripts no package
 
 > Scripts do package.json
@@ -245,10 +280,11 @@ ng add @angular/material
     "commit": "git-cz",
     "prettier:write": "npx prettier --write --ignore-unknown .",
     "prettier:check": "npx prettier --check .",
-    "lint": "ng lint",
-    "test": "ng test --code-coverage",
-    "test:dev": "npm run test -- --progress --browsers Chrome",
-    "test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
+    "lint": "ng lint --fix",
+    "test": "ng test  --coverage=true",
+    "test:watch": "ng test --watch",
+    "test:dev": "npm run tes:watch -- --verbose",
+    "test:ci": "npm run test -- --no-watch",
     "pre-commit": "npx --no-install lint-staged",
     "pre-push": "npm run test:ci",
     "prepare": "husky",
