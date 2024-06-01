@@ -28,5 +28,5 @@ ports:
 tasks:
   - name: Start front-end
     before: export NG_CLI_ANALYTICS=ci
-    init: echo n | npm i -g @angular/cli@17 && npm i -g commitizen
+    init: echo n | npm i -g @angular/cli@17 && npm i -g commitizen jest
     command: npm ci && npm run start

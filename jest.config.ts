@@ -1,6 +1,9 @@
 import type { Config } from 'jest';
 
-const config: Config = {
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { compilerOptions } from './tsconfig.json';
+
+const jestConfig: Config = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',
@@ -21,12 +24,8 @@ const config: Config = {
     '^.+\\.(t|j)s$': 'ts-jest',
   },
   moduleNameMapper: {
-    '@core/(.*)': '<rootDir>/src/app/core/$1',
-    '@pages/(.*)': '<rootDir>/src/app/pages/$1',
-    '@shared/(.*)': '<rootDir>/src/app/shared/$1',
-    '@layout/(.*)': '<rootDir>/src/app/layout/$1',
-    '@environments/(.*)': '<rootDir>/src/app/environments/$1',
+    ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' }),
   },
 };
 
-export default config;
+export default jestConfig;
