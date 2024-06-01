@@ -1,13 +1,16 @@
 <nav role="navigation">
   <mat-nav-list>
     <mat-list role="list">
-      <mat-list-item
-        [routerLink]="['/']"
-        [routerLinkActiveOptions]="{ exact: true }"
-        routerLinkActive="active"
-        role="listitem">
-        <span>Inicio</span>
-      </mat-list-item>
+      <div mat-subheader><h2>Páginas</h2></div>
+      @for (nav of navLinks; track nav) {
+        <a
+          mat-list-item
+          [routerLink]="nav.link"
+          routerLinkActive="list-item-active"
+          role="listitem"
+          >{{ nav.label }}</a
+        >
+      }
     </mat-list>
   </mat-nav-list>
 

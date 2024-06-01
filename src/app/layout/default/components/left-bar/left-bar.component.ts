@@ -8,6 +8,8 @@ import packages from '../../../../../../package.json';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
+import { NavLink } from './shared/models/nav-link.model';
+
 @Component({
   selector: 'app-left-bar',
   standalone: true,
@@ -23,4 +25,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 })
 export class LeftBarComponent {
   versionApp: string = packages.version;
+  navLinks!: NavLink[];
+
+  constructor() {
+    this.setNavLinks();
+  }
+
+  setNavLinks(): void {
+    this.navLinks = [
+      {
+        label: 'Inicio',
+        link: '/',
+      },
+    ];
+  }
 }
