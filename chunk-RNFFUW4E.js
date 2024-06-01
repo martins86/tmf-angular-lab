@@ -1,1 +1,0 @@
-import{Za as r,_a as i,ca as n,pb as a,sb as p}from"./chunk-73NTLZLP.js";var m=(()=>{let t=class t{};t.\u0275fac=function(o){return new(o||t)},t.\u0275cmp=n({type:t,selectors:[["app-logout"]],standalone:!0,features:[p],decls:2,vars:0,template:function(o,c){o&1&&(r(0,"p"),a(1,"logout works!"),i())}});let e=t;return e})();var d=[{path:"",component:m}];export{d as LOGOUT_ROUTE};
