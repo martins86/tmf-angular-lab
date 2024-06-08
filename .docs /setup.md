@@ -69,13 +69,16 @@ dist
 - bracketSpacing: espaçamento entre colchetes. Exemplo: { foo: bar }
 - bracketSameLine: o fechamento da tag fica na mesma linha. Exemplo: <tag/>
 - experimentalTernaries: utilize ternários curiosos, com o ponto de interrogação após a condição.
+- useTabs: Recue as linhas com tabulações em vez de espaços ( Default: false ).
 
 ```sh
 {
-  "arrowParens": "always",
-  "bracketSameLine": true,
-  "bracketSpacing": true,
-  "experimentalTernaries": true
+ "arrowParens": "always",
+ "bracketSameLine": true,
+ "bracketSpacing": true,
+ "experimentalTernaries": true,
+ "tabWidth": 2,
+ "useTabs": true
 }
 ```
 
