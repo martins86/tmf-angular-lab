@@ -3,33 +3,33 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TopBarComponent } from './top-bar.component';
 
 describe('Testes do TopBarComponent', () => {
-  let component: TopBarComponent;
-  let fixture: ComponentFixture<TopBarComponent>;
+	let component: TopBarComponent;
+	let fixture: ComponentFixture<TopBarComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [TopBarComponent],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [TopBarComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(TopBarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(TopBarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('Deve inicializar o TopBarComponent', () => {
-    expect(component).toBeTruthy();
-  });
+	it('Deve inicializar o TopBarComponent', () => {
+		expect(component).toBeTruthy();
+	});
 
-  describe('Testando o toggleLeftBar', () => {
-    it('Deve disparar o emit quando o toggleLeftBar for acionado', () => {
-      // Arrange
-      jest.spyOn(component.emitToggleLeftBar, 'emit');
+	describe('Testando o toggleLeftBar', () => {
+		it('Deve disparar o emit quando o toggleLeftBar for acionado', () => {
+			// Arrange
+			jest.spyOn(component.emitToggleLeftBar, 'emit');
 
-      // Act
-      component.toggleLeftBar();
+			// Act
+			component.toggleLeftBar();
 
-      // Assert
-      expect(component.emitToggleLeftBar.emit).toHaveBeenCalled();
-    });
-  });
+			// Assert
+			expect(component.emitToggleLeftBar.emit).toHaveBeenCalled();
+		});
+	});
 });

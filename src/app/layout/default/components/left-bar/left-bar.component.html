@@ -1,20 +1,20 @@
 <nav role="navigation">
-  <mat-nav-list>
-    <mat-list role="list">
-      <div mat-subheader><h2>Páginas</h2></div>
-      @for (nav of navLinks; track nav) {
-        <a
-          mat-list-item
-          [routerLink]="nav.link"
-          routerLinkActive="list-item-active"
-          role="listitem"
-          >{{ nav.label }}</a
-        >
-      }
-    </mat-list>
-  </mat-nav-list>
+	<mat-nav-list>
+		<mat-list role="list">
+			<div mat-subheader><h2>Páginas</h2></div>
+			@for (nav of navLinks; track nav) {
+				<a
+					mat-list-item
+					[routerLink]="nav.link"
+					routerLinkActive="list-item-active"
+					role="listitem"
+					>{{ nav.label }}</a
+				>
+			}
+		</mat-list>
+	</mat-nav-list>
 
-  <div class="version-app">
-    <h5>Versão {{ versionApp }}</h5>
-  </div>
+	<div class="version-app">
+		<h5>Versão {{ versionApp }}</h5>
+	</div>
 </nav>

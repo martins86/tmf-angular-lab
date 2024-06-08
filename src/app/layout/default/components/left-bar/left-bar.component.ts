@@ -11,32 +11,32 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavLink } from './shared/models/nav-link.model';
 
 @Component({
-  selector: 'app-left-bar',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink,
-    RouterLinkActive,
-    MatSidenavModule,
-    MatListModule,
-  ],
-  templateUrl: './left-bar.component.html',
-  styleUrl: './left-bar.component.scss',
+	selector: 'app-left-bar',
+	standalone: true,
+	imports: [
+		CommonModule,
+		RouterLink,
+		RouterLinkActive,
+		MatSidenavModule,
+		MatListModule,
+	],
+	templateUrl: './left-bar.component.html',
+	styleUrl: './left-bar.component.scss',
 })
 export class LeftBarComponent {
-  versionApp: string = packages.version;
-  navLinks!: NavLink[];
+	versionApp: string = packages.version;
+	navLinks!: NavLink[];
 
-  constructor() {
-    this.setNavLinks();
-  }
+	constructor() {
+		this.setNavLinks();
+	}
 
-  setNavLinks(): void {
-    this.navLinks = [
-      {
-        label: 'Inicio',
-        link: '/',
-      },
-    ];
-  }
+	setNavLinks(): void {
+		this.navLinks = [
+			{
+				label: 'Inicio',
+				link: '/',
+			},
+		];
+	}
 }

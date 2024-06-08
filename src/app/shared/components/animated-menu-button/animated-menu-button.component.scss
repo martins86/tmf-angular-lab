@@ -1,66 +1,66 @@
 button.animated-menu-button {
-  min-width: unset;
-  padding: unset;
-  border: unset;
-  color: unset;
-  background: unset;
+	min-width: unset;
+	padding: unset;
+	border: unset;
+	color: unset;
+	background: unset;
 }
 
 .animated-menu-button {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 .animated-menu-button span {
-  position: absolute;
-  width: 25px;
-  height: 4px;
-  background-color: white;
-  border-radius: 4px;
-  transition: 0.5s;
+	position: absolute;
+	width: 25px;
+	height: 4px;
+	background-color: white;
+	border-radius: 4px;
+	transition: 0.5s;
 }
 
 .animated-menu-button span:nth-child(1) {
-  transform: translateY(-11px);
-  width: 20px;
-  left: 8px;
+	transform: translateY(-11px);
+	width: 20px;
+	left: 8px;
 }
 
 .animated-menu-button.active span:nth-child(1) {
-  width: 30px;
-  transform: translateY(-2px) rotate(45deg);
-  transition-delay: 0.125s;
-  left: 6px;
+	width: 30px;
+	transform: translateY(-2px) rotate(45deg);
+	transition-delay: 0.125s;
+	left: 6px;
 }
 
 .animated-menu-button span:nth-child(2) {
-  transform: translateY(11px);
-  width: 12px;
-  left: 8px;
+	transform: translateY(11px);
+	width: 12px;
+	left: 8px;
 }
 
 .animated-menu-button.active span:nth-child(2) {
-  width: 30px;
-  transform: translateY(-2px) rotate(315deg);
-  transition-delay: 0.25s;
-  left: 6px;
+	width: 30px;
+	transform: translateY(-2px) rotate(315deg);
+	transition-delay: 0.25s;
+	left: 6px;
 }
 
 .animated-menu-button span:nth-child(3) {
-  left: 8px;
+	left: 8px;
 }
 
 .animated-menu-button.active span:nth-child(3) {
-  transform: translateX(60px);
+	transform: translateX(60px);
 }
 
 .animated-menu-button.active span {
-  background-color: red;
+	background-color: red;
 }

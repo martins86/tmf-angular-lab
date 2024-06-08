@@ -1,13 +1,13 @@
 <app-top-bar (emitToggleLeftBar)="toggleLeftBarOpen()" />
 <mat-drawer-container [hasBackdrop]="true">
-  <mat-drawer mode="over" [opened]="leftBarOpen" disableClose>
-    <app-left-bar />
-  </mat-drawer>
-  <mat-drawer-content>
-    <main>
-      <router-outlet />
-    </main>
-  </mat-drawer-content>
+	<mat-drawer mode="over" [opened]="leftBarOpen" disableClose>
+		<app-left-bar />
+	</mat-drawer>
+	<mat-drawer-content>
+		<main>
+			<router-outlet />
+		</main>
+	</mat-drawer-content>
 </mat-drawer-container>
 <app-bottom-bar />
 <app-loading />

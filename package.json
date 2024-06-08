@@ -1,94 +1,94 @@
 {
-  "name": "tmf-angular-lab",
-  "version": "0.0.0",
-  "description": "Projeto para estudos com Angular",
-  "engines": {
-    "node": "^20"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/martins86/tmf-angular-lab.git"
-  },
-  "keywords": [
-    "tmf86",
-    "angular"
-  ],
-  "author": "Thiago Martins de Freitas",
-  "email": "martins86@gmail.com",
-  "license": "ISC",
-  "homepage": "https://martins86.github.io/tmf-angular-lab/",
-  "bugs": {
-    "url": "https://github.com/martins86/tmf-angular-lab/issues"
-  },
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve --port=4200 --host=0.0.0.0 --disable-host-check --open",
-    "build": "ng build --configuration production --output-hashing=none --optimization --aot",
-    "build:ci": "npm run build -- --base-href=/.",
-    "deploy:gh": "ng deploy --base-href=/tmf-angular-lab/",
-    "watch": "ng build --watch --configuration development",
-    "commit": "git-cz",
-    "prettier:write": "npx prettier --write --ignore-unknown .",
-    "prettier:check": "npx prettier --check .",
-    "lint": "ng lint --fix",
-    "test": "ng test --coverage=true",
-    "test:watch": "ng test --watch",
-    "test:dev": "npm run test:watch -- --verbose --clearCache",
-    "test:ci": "npm run test -- --no-watch",
-    "pre-commit": "npx --no-install lint-staged",
-    "pre-push": "npm run test:ci",
-    "prepare": "husky",
-    "postinstall": "chmod ug+x .husky/*"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular-builders/jest": "^17.0.3",
-    "@angular/animations": "^17.3.0",
-    "@angular/cdk": "^17.3.10",
-    "@angular/common": "^17.3.0",
-    "@angular/compiler": "^17.3.0",
-    "@angular/core": "^17.3.0",
-    "@angular/forms": "^17.3.0",
-    "@angular/material": "^17.3.10",
-    "@angular/platform-browser": "^17.3.0",
-    "@angular/platform-browser-dynamic": "^17.3.0",
-    "@angular/router": "^17.3.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.8",
-    "@angular-eslint/builder": "17.5.1",
-    "@angular-eslint/eslint-plugin": "17.5.1",
-    "@angular-eslint/eslint-plugin-template": "17.5.1",
-    "@angular-eslint/schematics": "17.5.1",
-    "@angular-eslint/template-parser": "17.5.1",
-    "@angular/cli": "^17.3.8",
-    "@angular/compiler-cli": "^17.3.0",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@jest/globals": "^29.7.0",
-    "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "7.10.0",
-    "@typescript-eslint/parser": "7.10.0",
-    "angular-cli-ghpages": "^2.0.0-beta.2",
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.11",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jest-preset-angular": "^14.1.0",
-    "lint-staged": "^15.2.5",
-    "prettier": "^3.2.5",
-    "ts-jest": "^29.1.4",
-    "typescript": "~5.4.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
+	"name": "tmf-angular-lab",
+	"version": "0.0.0",
+	"description": "Projeto para estudos com Angular",
+	"engines": {
+		"node": "^20"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/martins86/tmf-angular-lab.git"
+	},
+	"keywords": [
+		"tmf86",
+		"angular"
+	],
+	"author": "Thiago Martins de Freitas",
+	"email": "martins86@gmail.com",
+	"license": "ISC",
+	"homepage": "https://martins86.github.io/tmf-angular-lab/",
+	"bugs": {
+		"url": "https://github.com/martins86/tmf-angular-lab/issues"
+	},
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve --port=4200 --host=0.0.0.0 --disable-host-check --open",
+		"build": "ng build --configuration production --output-hashing=none --optimization --aot",
+		"build:ci": "npm run build -- --base-href=/.",
+		"deploy:gh": "ng deploy --base-href=/tmf-angular-lab/",
+		"watch": "ng build --watch --configuration development",
+		"commit": "git-cz",
+		"prettier:write": "npx prettier --write --ignore-unknown .",
+		"prettier:check": "npx prettier --check .",
+		"lint": "ng lint --fix",
+		"test": "ng test --coverage=true",
+		"test:watch": "ng test --watch",
+		"test:dev": "npm run test:watch -- --verbose --clearCache",
+		"test:ci": "npm run test -- --no-watch",
+		"pre-commit": "npx --no-install lint-staged",
+		"pre-push": "npm run test:ci",
+		"prepare": "husky",
+		"postinstall": "chmod ug+x .husky/*"
+	},
+	"private": true,
+	"dependencies": {
+		"@angular-builders/jest": "^17.0.3",
+		"@angular/animations": "^17.3.0",
+		"@angular/cdk": "^17.3.10",
+		"@angular/common": "^17.3.0",
+		"@angular/compiler": "^17.3.0",
+		"@angular/core": "^17.3.0",
+		"@angular/forms": "^17.3.0",
+		"@angular/material": "^17.3.10",
+		"@angular/platform-browser": "^17.3.0",
+		"@angular/platform-browser-dynamic": "^17.3.0",
+		"@angular/router": "^17.3.0",
+		"rxjs": "~7.8.0",
+		"tslib": "^2.3.0",
+		"zone.js": "~0.14.3"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "^17.3.8",
+		"@angular-eslint/builder": "17.5.1",
+		"@angular-eslint/eslint-plugin": "17.5.1",
+		"@angular-eslint/eslint-plugin-template": "17.5.1",
+		"@angular-eslint/schematics": "17.5.1",
+		"@angular-eslint/template-parser": "17.5.1",
+		"@angular/cli": "^17.3.8",
+		"@angular/compiler-cli": "^17.3.0",
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-conventional": "^19.2.2",
+		"@jest/globals": "^29.7.0",
+		"@types/jest": "^29.5.12",
+		"@typescript-eslint/eslint-plugin": "7.10.0",
+		"@typescript-eslint/parser": "7.10.0",
+		"angular-cli-ghpages": "^2.0.0-beta.2",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"husky": "^9.0.11",
+		"jest": "^29.7.0",
+		"jest-environment-jsdom": "^29.7.0",
+		"jest-preset-angular": "^14.1.0",
+		"lint-staged": "^15.2.5",
+		"prettier": "^3.2.5",
+		"ts-jest": "^29.1.4",
+		"typescript": "~5.4.2"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }

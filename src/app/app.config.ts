@@ -10,11 +10,11 @@ import { TemplatePageTitleStrategy } from '@layout/default/default.routes';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideRouter(routes),
-    provideAnimations(),
-    provideHttpClient(withFetch()),
-    { provide: TitleStrategy, useClass: TemplatePageTitleStrategy },
-    provideAnimationsAsync(),
-  ],
+	providers: [
+		provideRouter(routes),
+		provideAnimations(),
+		provideHttpClient(withFetch()),
+		{ provide: TitleStrategy, useClass: TemplatePageTitleStrategy },
+		provideAnimationsAsync(),
+	],
 };

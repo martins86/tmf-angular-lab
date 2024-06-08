@@ -9,23 +9,23 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 @Component({
-  selector: 'app-default',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    MatSidenavModule,
-    TopBarComponent,
-    LeftBarComponent,
-    BottomBarComponent,
-    LoadingComponent,
-  ],
-  templateUrl: './default.component.html',
-  styleUrl: './default.component.scss',
+	selector: 'app-default',
+	standalone: true,
+	imports: [
+		RouterOutlet,
+		MatSidenavModule,
+		TopBarComponent,
+		LeftBarComponent,
+		BottomBarComponent,
+		LoadingComponent,
+	],
+	templateUrl: './default.component.html',
+	styleUrl: './default.component.scss',
 })
 export class DefaultComponent {
-  leftBarOpen: boolean = false;
+	leftBarOpen: boolean = false;
 
-  toggleLeftBarOpen(): void {
-    this.leftBarOpen = !this.leftBarOpen;
-  }
+	toggleLeftBarOpen(): void {
+		this.leftBarOpen = !this.leftBarOpen;
+	}
 }

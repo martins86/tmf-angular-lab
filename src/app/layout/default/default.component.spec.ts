@@ -6,48 +6,48 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultComponent } from './default.component';
 
 describe('Testes do DefaultComponent', () => {
-  let component: DefaultComponent;
-  let fixture: ComponentFixture<DefaultComponent>;
+	let component: DefaultComponent;
+	let fixture: ComponentFixture<DefaultComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        BrowserAnimationsModule,
-        RouterModule.forRoot([]),
-        DefaultComponent,
-      ],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [
+				BrowserAnimationsModule,
+				RouterModule.forRoot([]),
+				DefaultComponent,
+			],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(DefaultComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(DefaultComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('Deve inicializar o DefaultComponent', () => {
-    expect(component).toBeTruthy();
-  });
+	it('Deve inicializar o DefaultComponent', () => {
+		expect(component).toBeTruthy();
+	});
 
-  describe('Testando o toggleLeftBarOpen', () => {
-    it('Deve trocar o valor do leftBarOpen de false para true', () => {
-      // Arrange
-      component.leftBarOpen = false;
+	describe('Testando o toggleLeftBarOpen', () => {
+		it('Deve trocar o valor do leftBarOpen de false para true', () => {
+			// Arrange
+			component.leftBarOpen = false;
 
-      // Act
-      component.toggleLeftBarOpen();
+			// Act
+			component.toggleLeftBarOpen();
 
-      // Assert
-      expect(component.leftBarOpen).toBe(true);
-    });
+			// Assert
+			expect(component.leftBarOpen).toBe(true);
+		});
 
-    it('Deve trocar o valor do leftBarOpen de true para false', () => {
-      // Arrange
-      component.leftBarOpen = true;
+		it('Deve trocar o valor do leftBarOpen de true para false', () => {
+			// Arrange
+			component.leftBarOpen = true;
 
-      // Act
-      component.toggleLeftBarOpen();
+			// Act
+			component.toggleLeftBarOpen();
 
-      // Assert
-      expect(component.leftBarOpen).toBe(false);
-    });
-  });
+			// Assert
+			expect(component.leftBarOpen).toBe(false);
+		});
+	});
 });

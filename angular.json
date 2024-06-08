@@ -1,112 +1,112 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "9ce632a8-0e5b-40f1-bdaa-211a9fbf4947",
-    "schematicCollections": ["@angular-eslint/schematics"]
-  },
-  "newProjectRoot": "projects",
-  "projects": {
-    "tmf-angular-lab": {
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:application",
-          "configurations": {
-            "development": {
-              "extractLicenses": false,
-              "optimization": false,
-              "sourceMap": true
-            },
-            "production": {
-              "budgets": [
-                {
-                  "maximumError": "1mb",
-                  "maximumWarning": "500kb",
-                  "type": "initial"
-                },
-                {
-                  "maximumError": "4kb",
-                  "maximumWarning": "2kb",
-                  "type": "anyComponentStyle"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "outputHashing": "all"
-            }
-          },
-          "defaultConfiguration": "production",
-          "options": {
-            "assets": ["src/favicon.ico", "src/assets"],
-            "browser": "src/main.ts",
-            "index": "src/index.html",
-            "inlineStyleLanguage": "scss",
-            "outputPath": "dist/tmf-angular-lab",
-            "polyfills": ["zone.js"],
-            "scripts": [],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
-            ],
-            "tsConfig": "tsconfig.app.json"
-          }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "tmf-angular-lab:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "development": {
-              "buildTarget": "tmf-angular-lab:build:development"
-            },
-            "production": {
-              "buildTarget": "tmf-angular-lab:build:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": {
-            "assets": ["src/favicon.ico", "src/assets"],
-            "configPath": "./jest.config.ts",
-            "inlineStyleLanguage": ["scss"],
-            "polyfills": ["zone.js", "zone.js/testing"],
-            "scripts": [],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
-            ],
-            "tsConfig": "tsconfig.spec.json"
-          }
-        }
-      },
-      "prefix": "app",
-      "projectType": "application",
-      "root": "",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "sourceRoot": "src"
-    }
-  },
-  "version": 1
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"cli": {
+		"analytics": "9ce632a8-0e5b-40f1-bdaa-211a9fbf4947",
+		"schematicCollections": ["@angular-eslint/schematics"]
+	},
+	"newProjectRoot": "projects",
+	"projects": {
+		"tmf-angular-lab": {
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:application",
+					"configurations": {
+						"development": {
+							"extractLicenses": false,
+							"optimization": false,
+							"sourceMap": true
+						},
+						"production": {
+							"budgets": [
+								{
+									"maximumError": "1mb",
+									"maximumWarning": "500kb",
+									"type": "initial"
+								},
+								{
+									"maximumError": "4kb",
+									"maximumWarning": "2kb",
+									"type": "anyComponentStyle"
+								}
+							],
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.prod.ts"
+								}
+							],
+							"outputHashing": "all"
+						}
+					},
+					"defaultConfiguration": "production",
+					"options": {
+						"assets": ["src/favicon.ico", "src/assets"],
+						"browser": "src/main.ts",
+						"index": "src/index.html",
+						"inlineStyleLanguage": "scss",
+						"outputPath": "dist/tmf-angular-lab",
+						"polyfills": ["zone.js"],
+						"scripts": [],
+						"styles": [
+							"@angular/material/prebuilt-themes/indigo-pink.css",
+							"src/styles.scss"
+						],
+						"tsConfig": "tsconfig.app.json"
+					}
+				},
+				"deploy": {
+					"builder": "angular-cli-ghpages:deploy"
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"buildTarget": "tmf-angular-lab:build"
+					}
+				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"configurations": {
+						"development": {
+							"buildTarget": "tmf-angular-lab:build:development"
+						},
+						"production": {
+							"buildTarget": "tmf-angular-lab:build:production"
+						}
+					},
+					"defaultConfiguration": "development"
+				},
+				"test": {
+					"builder": "@angular-builders/jest:run",
+					"options": {
+						"assets": ["src/favicon.ico", "src/assets"],
+						"configPath": "./jest.config.ts",
+						"inlineStyleLanguage": ["scss"],
+						"polyfills": ["zone.js", "zone.js/testing"],
+						"scripts": [],
+						"styles": [
+							"@angular/material/prebuilt-themes/indigo-pink.css",
+							"src/styles.scss"
+						],
+						"tsConfig": "tsconfig.spec.json"
+					}
+				}
+			},
+			"prefix": "app",
+			"projectType": "application",
+			"root": "",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
+			"sourceRoot": "src"
+		}
+	},
+	"version": 1
 }

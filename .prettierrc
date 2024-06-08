@@ -1,6 +1,8 @@
 {
-  "arrowParens": "always",
-  "bracketSameLine": true,
-  "bracketSpacing": true,
-  "experimentalTernaries": true
+	"arrowParens": "always",
+	"bracketSameLine": true,
+	"bracketSpacing": true,
+	"experimentalTernaries": true,
+	"tabWidth": 2,
+	"useTabs": true
 }
