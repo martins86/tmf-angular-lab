@@ -1,0 +1,1 @@
+import{d as a,e as b}from"./chunk-PWGLAMQR.js";import"./chunk-WXI33M2S.js";import"./chunk-CIH6O5WW.js";import"./chunk-DOP45TXB.js";import"./chunk-IFME777R.js";export{a as LAYOUT_DEFAULT,b as TemplatePageTitleStrategy};
