@@ -1,0 +1,16 @@
+.title-page {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.3rem;
+
+	h1 {
+		margin: 0;
+	}
+}
+
+.title-page,
+.description-page {
+	margin-top: 1.2rem;
+	margin-bottom: 1.2rem;
+}
