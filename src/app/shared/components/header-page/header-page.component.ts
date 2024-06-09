@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 				@if (iconName) {
 					<mat-icon aria-hidden="true" fontIcon="{{ iconName }}"></mat-icon>
 				}
-				@if (descriptionPage) {
+				@if (iconChevronRight) {
 					<mat-icon
 						aria-hidden="true"
 						fontIcon="{{ iconChevronRight }}"></mat-icon>
