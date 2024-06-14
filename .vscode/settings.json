@@ -8,5 +8,5 @@
 		"source.sortMembers": "explicit"
 	},
 	"editor.snippetSuggestions": "top",
-    	"editor.tabCompletion": true
+	"editor.tabCompletion": true
 }
