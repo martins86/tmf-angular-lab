@@ -35,7 +35,7 @@
 		"test:watch": "ng test --watch",
 		"test:dev": "npm run test:watch -- --verbose --clearCache",
 		"test:ci": "npm run test -- --no-watch",
-		"pre-commit": "npx --no-install lint-staged",
+		"pre-commit": "npx --no-install lint-staged && npm run lint",
 		"pre-push": "npm run test:ci",
 		"prepare": "husky",
 		"postinstall": "chmod ug+x .husky/*"
