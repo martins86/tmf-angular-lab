@@ -1,9 +1,18 @@
 {
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
 	"recommendations": [
-		"angular.ng-template",
 		"vscode-icons-team.vscode-icons",
 		"prantlf.karma-problem-matchers",
-		"xabikos.javascriptsnippets"
+		"xabikos.javascriptsnippets",
+		"mikael.angular-beastcode",
+		"angular.ng-template",
+		"cyrilletuzi.angular-schematics",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-rename-tag",
+		"mohammadbaqer.better-folding",
+		"streetsidesoftware.code-spell-checker-portuguese-brazilian",
+		"streetsidesoftware.code-spell-checker-british-english",
+		"streetsidesoftware.code-spell-checker",
+		"ms-azuretools.vscode-docker"
 	]
 }
