@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoadingService } from '@shared/services/loading.service';
+import { LoadingService } from '@shared/services/loading/loading.service';
 
 import { LoadingComponent } from './loading.component';
 

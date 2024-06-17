@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-import { LoadingService } from '@shared/services/loading.service';
+import { LoadingService } from '@shared/services/loading/loading.service';
 
 @Component({
 	selector: 'app-loading',
