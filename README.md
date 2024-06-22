@@ -17,10 +17,10 @@
 | Ação                                          | Comando                |
 | --------------------------------------------- | ---------------------- |
 | `Inicia o App local na porta 4200`            | npm run start          |
-| `Gera um build do app`                        | npm run build          |
-| `Gera um build do app para deploy`            | npm run build:ci       |
+| `Executa o build do app`                      | npm run build          |
+| `Executa o build do app para deploy`          | npm run build:ci       |
 | `Envia o deploy para o ghpages`               | npm run deploy:gh      |
-| `Analiza o commit`                            | npm run commit         |
+| `Executa a analise da msg do commit`          | npm run commit         |
 | `Formata o código para padrão do projeto`     | npm run prettier:write |
 | `Checa se o código esta no padrão do projeto` | npm run prettier:check |
 | `Checa se o código esta correto`              | npm run lint           |
