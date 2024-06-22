@@ -3,19 +3,19 @@
 
 if git diff --cached --name-only | xargs grep -n 'fdescribe('
   then
-  echo "Error: 'fdescribe' encontrado. Por favor remova antes de realizar o commit."
+  echo "Error: 'fdescribe' encontrado. Por favor, ajuste antes de seguir com o commit."
   exit 1
 fi
 
 if git diff --cached --name-only | xargs grep -n 'fit('
   then
-  echo "Error: 'fit' encontrado. Por favor remova antes de realizar o commit."
+  echo "Error: 'fit' encontrado. Por favor, ajuste antes de seguir com o commit."
   exit 1
 fi
 
 if git diff --cached --name-only | xargs grep -n 'console.'
   then
-  echo "Error: 'console' encontrado. Por favor remova antes de realizar o commit."
+  echo "Error: 'console' encontrado. Por favor, ajuste antes de seguir com o commit."
   exit 1
 fi
 
