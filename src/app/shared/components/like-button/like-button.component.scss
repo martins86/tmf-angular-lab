@@ -1,0 +1,10 @@
+.like-button-container {
+	padding: 0.3rem 0.5rem;
+	border-radius: 2rem;
+	display: inline-flex;
+	border: 0.1rem solid #ccc;
+	cursor: pointer;
+	align-items: center;
+	column-gap: 0.5rem;
+	flex-direction: row;
+}
