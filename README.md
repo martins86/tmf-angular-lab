@@ -36,6 +36,13 @@
 <br>
 <br>
 
+## Leitor de Tela
+
+- Chrome Web Store: [Screen Reader](https://chromewebstore.google.com/detail/kgejglhpjiefppelpmljglcjbhoiplfn)
+
+<br>
+<br>
+
 # Licença de uso &nbsp;
 
 TMF Lab is licensed under [MIT licensed](./LICENSE).
