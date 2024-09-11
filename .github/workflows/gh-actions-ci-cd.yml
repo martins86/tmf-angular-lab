@@ -112,8 +112,22 @@ jobs:
         run: |
           npm run test:ci
 
-  deploy:
+  lighthouse:
     needs: [build, test-unit]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://martins86.github.io/tmf-angular-lab/
+          budgetPath: ./budget.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+  deploy:
+    needs: [build, test-unit, lighthouse]
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
