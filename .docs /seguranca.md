@@ -3,14 +3,17 @@ Para realizar testes de segurança em uma aplicação Angular, existem várias f
 ### Ferramentas Recomendadas
 
 1. **OWASP ZAP (Zed Attack Proxy)**
+
    - Uma das ferramentas mais populares para testes de segurança em aplicações web.
    - Pode ser usada para identificar vulnerabilidades como injeção, XSS, CSRF, etc.
 
 2. **Snyk**
+
    - Monitora e corrige vulnerabilidades em dependências de projetos.
    - Oferece integração com o GitHub para análise contínua.
 
 3. **npm audit**
+
    - Uma ferramenta integrada ao npm que verifica as dependências do seu projeto em busca de vulnerabilidades conhecidas.
 
 4. **SonarQube**
@@ -19,7 +22,9 @@ Para realizar testes de segurança em uma aplicação Angular, existem várias f
 ### Onde Realizar os Testes
 
 #### Pré-push
+
 - **Vantagens:**
+
   - Permite que você identifique problemas de segurança antes de enviar código para o repositório.
   - Ajuda a manter um padrão de segurança desde o início.
 
@@ -27,7 +32,9 @@ Para realizar testes de segurança em uma aplicação Angular, existem várias f
   - Pode adicionar um tempo extra ao seu workflow de desenvolvimento se os testes forem demorados.
 
 #### Pipeline no GitHub Actions
+
 - **Vantagens:**
+
   - Permite que você execute testes de segurança em um ambiente controlado e isolado.
   - Facilita a automação e a integração contínua, garantindo que todas as alterações sejam testadas.
 
