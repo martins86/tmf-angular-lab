@@ -2,13 +2,6 @@ name: CI/CD
 
 on:
   pull_request:
-    paths:
-      - "**.js"
-      - "**.ts"
-      - "**.html"
-      - "**.scss"
-      - "**.json"
-      - "**.yml"
     branches: [master]
   push:
     paths:
@@ -25,94 +18,63 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      build_id: ${{ steps.build_step.outputs.build_id }}
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Set up Node.js ${{ matrix.node-version }}
+      - name: Set up Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
           cache: "npm"
 
       - name: Cache node modules
-        id: cache-nodemodules
         uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
         with:
           path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-build-node-
 
       - name: Install dependencies
-        if: success()
-        run: |
-          npm install
+        run: npm ci
 
       - name: Build app
-        if: success()
-        id: build_step
-        run: |
-          npm run build:ci
+        run: npm run build:prod
 
   test-unit:
     needs: build
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Set up Node.js ${{ matrix.node-version }}
+      - name: Set up Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
           cache: "npm"
 
       - name: Cache node modules
-        id: cache-nodemodules
         uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
         with:
           path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-build-node-
 
       - name: Install dependencies
-        if: success()
-        run: |
-          npm install
+        run: npm ci
 
       - name: Test Unit with coverage
-        if: success()
-        run: |
-          npm run test:ci
+        run: npm run test:ci
 
   lighthouse:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -128,17 +90,11 @@ jobs:
   deploy:
     needs: [build, test-unit]
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v1
 
       - name: Deploy to GitHub Pages
-        if: success()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install
           npm run deploy:gh -- --name="martins86" --email="martins86@gmail.com" --no-silent
