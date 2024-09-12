@@ -60,7 +60,20 @@ jobs:
       - name: Test Unit with coverage
         run: npm run test:ci
 
+  deploy:
+    needs: [build, test-unit]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy:gh -- --name="martins86" --email="martins86@gmail.com" --no-silent
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   lighthouse:
+    needs: [build, test-unit, deploy]
     if: github.event_name == 'pull_request' || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
@@ -73,15 +86,3 @@ jobs:
           budgetPath: ./budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
-
-  deploy:
-    needs: [build, test-unit]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Deploy to GitHub Pages
-        run: npm run deploy:gh -- --name="martins86" --email="martins86@gmail.com" --no-silent
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
