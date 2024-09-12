@@ -113,7 +113,6 @@ jobs:
           npm run test:ci
 
   lighthouse:
-    needs: [build, test-unit]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -127,7 +126,7 @@ jobs:
           temporaryPublicStorage: true
 
   deploy:
-    needs: [build, test-unit, lighthouse]
+    needs: [build, test-unit]
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
