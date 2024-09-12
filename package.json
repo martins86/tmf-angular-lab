@@ -23,7 +23,7 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve --port=4200 --host=0.0.0.0 --disable-host-check --open",
-		"build": "ng build --configuration production --output-hashing=all --optimization --aot --source-map=false --extract-css",
+		"build": "ng build --configuration production --output-hashing=all --optimization --aot --source-map=false",
 		"build:ci": "npm run build -- --base-href=/.",
 		"deploy:gh": "ng deploy --base-href=/tmf-angular-lab/",
 		"watch": "ng build --watch --configuration development",
