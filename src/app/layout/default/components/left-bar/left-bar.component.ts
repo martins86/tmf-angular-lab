@@ -37,6 +37,14 @@ export class LeftBarComponent {
 				label: 'Inicio',
 				link: '/',
 			},
+			{
+				label: 'Entrar',
+				link: 'login',
+			},
+			{
+				label: 'Registrar-se',
+				link: 'registration',
+			},
 		];
 	}
 }

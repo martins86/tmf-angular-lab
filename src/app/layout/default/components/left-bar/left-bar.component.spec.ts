@@ -24,7 +24,20 @@ describe('Testes do LeftBarComponent', () => {
 	describe('Testando o setNavLinks', () => {
 		it('Deve setar o label e link dos itens de navegação', () => {
 			// Arrange
-			const navItens = [{ label: 'Inicio', link: '/' }];
+			const navItens = [
+				{
+					label: 'Inicio',
+					link: '/',
+				},
+				{
+					label: 'Entrar',
+					link: 'login',
+				},
+				{
+					label: 'Registrar-se',
+					link: 'registration',
+				},
+			];
 
 			// Act
 			component.setNavLinks();
