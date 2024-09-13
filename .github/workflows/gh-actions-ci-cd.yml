@@ -95,6 +95,7 @@ jobs:
           npm run test:ci
 
   deploy:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
     needs: [build, test-unit]
     runs-on: ubuntu-latest
     env:
@@ -127,7 +128,8 @@ jobs:
     if: github.event_name == 'pull_request' || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-      - name: Audit URL using Lighthouse
+      - uses: actions/checkout@v4
+      - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
