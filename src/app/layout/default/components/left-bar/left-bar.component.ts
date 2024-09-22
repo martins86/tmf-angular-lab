@@ -25,22 +25,14 @@ import { NavLink } from './shared/models/nav-link.model';
 })
 export class LeftBarComponent {
 	versionApp: string = packages.version;
-	navLinks!: NavLink[];
-
-	constructor() {
-		this.setNavLinks();
-	}
-
-	setNavLinks(): void {
-		this.navLinks = [
-			{
-				label: 'Inicio',
-				link: '/',
-			},
-			{
-				label: 'Font Size',
-				link: 'font-size',
-			},
-		];
-	}
+	navLinks: NavLink[] = [
+		{
+			label: 'Inicio',
+			link: '/',
+		},
+		{
+			label: 'Font Size',
+			link: 'font-size',
+		},
+	];
 }
