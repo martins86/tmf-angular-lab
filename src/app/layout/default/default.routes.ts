@@ -17,6 +17,14 @@ export const LAYOUT_DEFAULT: Routes = [
 					import('@pages/home/home.routes').then((m) => m.HOME_ROUTE),
 			},
 			{
+				path: 'font-size',
+				title: `${baseTitle} Font Size`,
+				loadChildren: () =>
+					import('@pages/font-size/font-size.routes').then(
+						(m) => m.FONT_SIZE_ROUTE,
+					),
+			},
+			{
 				path: 'login',
 				title: `${baseTitle} Entrar`,
 				loadChildren: () =>

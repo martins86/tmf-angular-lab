@@ -1,5 +1,17 @@
 @import "./style/fonts.scss";
 
+.content {
+	margin: 34px 20px;
+}
+
+.container {
+	width: 100%;
+}
+
+.d-flex {
+	display: flex;
+}
+
 .list-item-active span {
 	color: red;
 }

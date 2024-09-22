@@ -38,12 +38,8 @@ export class LeftBarComponent {
 				link: '/',
 			},
 			{
-				label: 'Entrar',
-				link: 'login',
-			},
-			{
-				label: 'Registrar-se',
-				link: 'registration',
+				label: 'Font Size',
+				link: 'font-size',
 			},
 		];
 	}
