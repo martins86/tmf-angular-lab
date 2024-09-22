@@ -109,7 +109,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install
-          npm run deploy:gh -- --name="martins86" --email="martins86@gmail.com" --no-silent
+          npm run deploy:gh -- --name="martins86" --email="martins86@gmail.com" --no-silent --repo=https://github.com/martins86/tmf-angular-lab.git
 
   audit:
     if: github.event_name == 'pull_request' || github.event_name == 'push'
