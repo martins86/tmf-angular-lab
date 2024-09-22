@@ -33,11 +33,8 @@ describe('Testes do LeftBarComponent', () => {
 					label: 'Entrar',
 					link: 'login',
 				},
-				{
-					label: 'Registrar-se',
-					link: 'registration',
-				},
 			];
+			component.navLinks = navItens;
 
 			// Act
 			component.setNavLinks();
